@@ -6,15 +6,27 @@
         background-position: center center;
         transition: transform 0.3s; /* Add a smooth transition effect */
         cursor: pointer;
-        @media screen and (max-width: 768px) {
-            display: none;
+        @media screen and (max-width: 320px) {
+            width: 259px;
+            height: 237px;
         }
     }
+  
     &__images {
-        &_container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-        }
+            @media screen and (max-width: 768px) {
+                display: none;
+                }
+    }
+
+    &__image {
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        width: 212px;
+        height: 159px;
     }
     
 }
@@ -22,3 +34,6 @@
 .zoomed-in {
     transform: scale(1.1); /* You can adjust the scale value as needed */
   }
+
+
+
