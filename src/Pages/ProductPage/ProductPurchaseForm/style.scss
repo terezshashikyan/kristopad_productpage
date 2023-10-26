@@ -1,0 +1,175 @@
+.productPurchaseForm {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 320px) {
+        grid-template-columns: 1fr;
+    }
+
+    &__color {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        &_p{
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        &_dropdown {
+            position: absolute;
+        }
+        &_item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #595959;
+            background:#FFF;
+            width: 117px;
+            height: 50px;
+            &_clrHolder {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:rgba(0, 0, 0, 0.85);
+                /* Footnote 12/description */
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 166.667% */
+        }
+            &_nameHolder {
+                color:rgba(0, 0, 0, 0.85);
+                /* Footnote 12/description */
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 166.667% */
+            }
+    }
+    }
+    &__size {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+        &_p{
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        &_button{
+            /* Subheading 16/regular */
+            color: rgba(0, 0, 0, 0.65);
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            border-radius: 2px;
+            border: 1px solid #D9D9D9;
+            background: #FFF;
+            padding: 8px 12px;
+            width: 100%;
+            max-width: 264px;
+            text-align: left;
+        }
+
+        &_guideLink {
+            color: #1A1A1A;
+            /* Body 14/regular-underline */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+            text-decoration-line: underline;
+            margin-top: 16px;
+        }
+
+        &_dropdown {
+            position: absolute;
+            width: 100%;
+            max-width: 264px;
+            &_item {
+            /* Subheading 16/regular */
+            color: rgba(0, 0, 0, 0.65);
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            border-radius: 2px;
+            border: 1px solid #D9D9D9;
+            background: #FFF;
+            padding: 8px 12px;
+            width: 100%;
+            max-width: 264px;
+            text-align: left;
+            }
+            &_item:hover {
+                background-color: #D9D9D9;
+            }
+        }
+
+    }
+    &__quantity {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        &_p{
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        &_holder {
+            display: flex;
+            gap: 6px;
+            &_item {
+                border-radius: 2px;
+                border: 1px solid #D9D9D9;
+                background: #FFF;
+                padding: 4px;
+            }
+
+            &_value {
+                padding: 4px 12px;
+                color:rgba(0, 0, 0, 0.85);
+                /* Subheading 16/regular */
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 150% */
+            }
+        }
+    }
+    &__button {
+                border: none;
+                border-radius: 4px;
+                background:#5D4C3C;
+                display: flex;
+                width: 100%;
+                max-width: 264px;
+                height: 50px;
+                padding: 13px 32px;
+                justify-content: center;
+                align-items: center;    
+                margin-top: 26px;          
+    }
+}
