@@ -7,7 +7,7 @@ import Gallery from './Gallery';
 
 function ProductPage() {
   return (
-    <div className="productPage">
+    <div className="productPage container">
       <Gallery/>
       <div className='product__details'>
       <ProductInfo/>

@@ -16,7 +16,7 @@ function Gallery() {
 
     const imageUrls = [img1, img2, img3, img4, img5, img6];
     
-    function handleMainImgChange(event) {
+    function handleMainImgChangeOnClick(event) {
         // getting the background image of the clicked div and setting it as the background of the main. 
         const target = event.target;
         const computedStyle = window.getComputedStyle(target);
@@ -29,15 +29,16 @@ function Gallery() {
       };
 
       useEffect(() => {
+        if (window.innerWidth <= 768) {
         const interval = setInterval(() => {
-            setCurrentIndex((currentIndex + 1) % imageUrls.length)
+          setCurrentIndex((currentIndex + 1) % imageUrls.length)
           setMainImg(imageUrls[currentIndex]);
         }, 3000); 
     
         return () => {
           clearInterval(interval);
         };
-      }, [currentIndex]);
+}}, [currentIndex]);
 
       
 
@@ -48,7 +49,7 @@ function Gallery() {
                 {imageUrls.map((imageUrl, index) => {
                     return (
                         <div
-                        onClick = {handleMainImgChange}
+                        onClick = {handleMainImgChangeOnClick}
                         key={index}
                         className='gallery__image'
                         style={{ backgroundImage: `url(${imageUrl})`}}
