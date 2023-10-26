@@ -1,7 +1,24 @@
 .gallery {
     &__mainImg {
+        width: 613.527px;
+        height: 561.664px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: transform 0.3s; /* Add a smooth transition effect */
+        cursor: pointer;
         @media screen and (max-width: 768px) {
             display: none;
         }
     }
+    &__images {
+        &_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
 }
+
+.zoomed-in {
+    transform: scale(1.1); /* You can adjust the scale value as needed */
+  }

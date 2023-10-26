@@ -11,12 +11,19 @@ import img6 from '../../../Assets/Images/6.png';
 
 function Gallery() {
     const [mainImg, setMainImg] = useState(bgImg);
+    const [isZoomed, setIsZoomed] = useState(false);
+
     function handleMainImgChange(event) {
         setMainImg(event.target.src)
     }
+
+    const handleZoomClick = () => {
+        setIsZoomed(!isZoomed);
+      };
+
     return (
         <div className="gallery">
-        <div className="gallery__mainImg" style={{backgroundImage: `url(${mainImg})`, width: '613.527px', height: '561.664px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}></div>
+        <div className={`gallery__mainImg ${isZoomed ? 'zoomed-in' : ''}`}  style={{backgroundImage: `url(${mainImg})`}} onClick={handleZoomClick}></div>
         <div className="gallery__images_container">
         <img onClick={handleMainImgChange} src= {img1} alt="carImg"/>
         <img onClick={handleMainImgChange} src= {img2} alt="carImg"/>
