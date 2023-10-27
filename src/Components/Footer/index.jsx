@@ -1,16 +1,14 @@
-import './style.scss';
-import logo from '../../Assets/Icons/whiteLogo.png';
-import instagram from '../../Assets/Icons/instagram.png';
-import facebook from '../../Assets/Icons/facebook.png';
-import mail from '../../Assets/Icons/mail.png';
+import {mail, whiteLogo, facebook, instagram} from '../../Assets/Icons';
 
-function Footer() {
+import './style.scss';
+
+const Footer = () => {
     return (
     <footer>
       <div className="footer container">
         <div className="footer__block footer__block1">
             <div className="footer__block1_logo">
-              <img src= {logo} alt="logo" />
+              <img src= {whiteLogo} alt="logo" />
             </div>
             <div className="footer__block1_adressess">
               <p className='subtitle__light'>Northern Avenue 10/1</p>

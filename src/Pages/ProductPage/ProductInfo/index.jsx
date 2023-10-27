@@ -1,7 +1,7 @@
 import './style.scss';
 
 
-function ProductInfo() {
+const ProductInfo = () => {
     return (
         <section className="productInfo">
             <h3 className="productInfo__code">

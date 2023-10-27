@@ -1,15 +1,15 @@
-import './App.css';
-import ProductPage from "./Pages/ProductPage";
 import Header from "./Components/Header";
 import Footer from './Components/Footer';
+import ProductPage from "./Pages/ProductPage";
 
+import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Header/>
+       <Header/>
        <ProductPage/>
-      {/* <Footer/>  */}
+       <Footer/>  
     </div>
   );
 }

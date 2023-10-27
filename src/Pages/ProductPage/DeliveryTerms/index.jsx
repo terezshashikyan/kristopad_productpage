@@ -1,6 +1,6 @@
 import './style.scss';
 
-function DeliveryTerms() {
+const DeliveryTerms = () => {
     return (
         <div className="deliveryTerms">
             <h3 className="deliveryTerms__headname">Delivery Terms</h3>

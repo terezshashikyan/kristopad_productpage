@@ -1,11 +1,12 @@
-import './style.scss';
 import { useState } from 'react';
 import plusIcon from '../../../Assets/Icons/Plus.png';
 import minusIcon from '../../../Assets/Icons/Minus.png';
 import checkIcon from '../../../Assets/Icons/Check.png';
-import checkIconSmall from '../../../Assets/Icons/CheckSmallIcon.png'
+import checkIconSmall from '../../../Assets/Icons/CheckSmallIcon.png';
 
-function ProductPurchaseForm() {
+import './style.scss';
+
+const ProductPurchaseForm = () => {
     const [color, setColor] = useState('black');
     const [colorMenuOpen, setColorMenuOpen] = useState(false);
     const [size, setSize] = useState('Select Size');

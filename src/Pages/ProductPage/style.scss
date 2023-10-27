@@ -1,9 +1,11 @@
 .productPage {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
     gap: 16px;
     @media screen and (max-width: 768px) {
-        flex-direction: column;
+        grid-template-columns: 100%;
+
     }
 }

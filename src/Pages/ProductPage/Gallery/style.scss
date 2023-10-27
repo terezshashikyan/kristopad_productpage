@@ -1,6 +1,8 @@
 .gallery {
+    width: 100%;
     &__mainImg {
-        width: 613.527px;
+        width: 100%;
+        max-width: 613.527px;
         height: 561.664px;
         background-repeat: no-repeat;
         background-position: center center;
@@ -15,6 +17,7 @@
     &__images {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
             @media screen and (max-width: 768px) {
                 display: none;
                 }
