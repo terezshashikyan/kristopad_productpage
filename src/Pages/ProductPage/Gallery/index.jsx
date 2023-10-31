@@ -1,7 +1,7 @@
+import { images} from "./constant";
 import { useState, useEffect} from "react";
+import {img1, img2, img3, img4, img5, img6} from '../../../Assets/Images';
 import bgImg from "../../../Assets/Images/bgImg.png";
-
-import { imageUrls } from "./constant";
 
 import "./style.scss";
 
@@ -22,11 +22,22 @@ const Gallery = () => {
     setIsZoomed(!isZoomed);
   };
 
+  const imagesRenderer = images.map((image) => {
+    return (
+      <div
+        onClick={handleMainImgChangeOnClick}
+        key={image.id}
+        className="gallery__image"
+        style={{ backgroundImage: `url(${image.src})` }}
+      />
+    );
+  })
+
   useEffect(() => {
     if (window.innerWidth <= 768) {
       const interval = setInterval(() => {
-        setCurrentIndex((currentIndex + 1) % imageUrls.length);
-        setMainImg(imageUrls[currentIndex]);
+        setCurrentIndex((currentIndex + 1) % images.length);
+        setMainImg(images[currentIndex].src);
       }, 3000);
 
       return () => {
@@ -43,16 +54,7 @@ const Gallery = () => {
         onClick={togleZoomClick}
       ></div>
       <div className="gallery__images">
-        {imageUrls.map((imageUrl, index) => {
-          return (
-            <div
-              onClick={handleMainImgChangeOnClick}
-              key={index}
-              className="gallery__image"
-              style={{ backgroundImage: `url(${imageUrl})` }}
-            />
-          );
-        })}
+        {imagesRenderer}
       </div>
     </div>
   );
