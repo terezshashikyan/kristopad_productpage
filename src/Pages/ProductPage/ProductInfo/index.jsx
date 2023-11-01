@@ -5,7 +5,7 @@ const ProductInfo = () => {
     return (
         <section className="productInfo">
             <h3 className="productInfo__code">
-            20\01\512\0001
+            20 \ 01 \ 512 \ 0001
             </h3>
             <p className="productInfo__about">
             If you're strolling around town on a sunny Saturday afternoon, and wear KristoBad boots while wearing these, life really is pretty good.
