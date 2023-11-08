@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {plusIcon, minusIcon, checkIcon, checkIconSmall} from '../../../Assets/Icons';
+import {plusIcon, minusIcon, checkIcon, checkIconSmall} from '../../../assets/icons';
 
 import './style.scss';
 

@@ -1,10 +1,27 @@
-import { MENU_ITEMS } from "./constant";
+import { MENU_ITEMS } from "./constants";
 
-import {logo, US, menuIcon, heartIcon, searchIcon, cartIcon, arrow} from '../../Assets/Icons';
+import {
+  logo,
+  US,
+  menuIcon,
+  heartIcon,
+  searchIcon,
+  cartIcon,
+  arrow,
+  dollar,
+} from "../../assets/icons";
 
 import "./style.scss";
 
 const Header = () => {
+  const menuItemsRenderer = MENU_ITEMS.map(({ id, name }) => {
+    return (
+      <div key={id} className="header__block2_item">
+        <p className="header__block2_item_title">{name}</p>
+      </div>
+    );
+  });
+
   return (
     <header>
       <section className="header container">
@@ -17,19 +34,11 @@ const Header = () => {
             <img src={arrow} alt="arrow" />
           </div>
           <div className="header__block1_currency">
-            $
+            <img src={dollar} alt="dollar" />
             <img src={arrow} alt="arrow" />
           </div>
         </div>
-        <div className="header__block header__block2">
-          {MENU_ITEMS.map(({ id, name }) => {
-            return (
-              <div key={id} className="header__block2_item">
-                <p className="subtitle">{name}</p>
-              </div>
-            );
-          })}
-        </div>
+        <div className="header__block header__block2">{menuItemsRenderer}</div>
         <div className="header__block header__block3">
           <div className="header__block3_wishList">
             <img src={heartIcon} alt="heart icon" />
@@ -41,7 +50,7 @@ const Header = () => {
             <img src={cartIcon} alt="cart icon" />
           </div>
           <div className="header__block3_signin">
-            <span className="subtitle">Sign In </span>
+            <span>Sign In </span>
             <img src={arrow} alt="sign in" />
           </div>
           <div className="header__block3_hamburgerMenu">
@@ -51,5 +60,5 @@ const Header = () => {
       </section>
     </header>
   );
-}
+};
 export default Header;

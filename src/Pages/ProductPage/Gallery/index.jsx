@@ -1,7 +1,6 @@
-import { images} from "./constant";
 import { useState, useEffect} from "react";
-import {img1, img2, img3, img4, img5, img6} from '../../../Assets/Images';
-import bgImg from "../../../Assets/Images/bgImg.png";
+import { images} from "./constant";
+import bgImg from "../../../assets/images/bgImg.png";
 
 import "./style.scss";
 
