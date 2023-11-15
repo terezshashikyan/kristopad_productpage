@@ -12,9 +12,7 @@ const Gallery = () => {
   function handleMainImgChangeOnClick(event) {
     // getting the background image of the clicked div and setting it as the background of the main.
     const target = event.target;
-    const computedStyle = window.getComputedStyle(target);
-    const backgroundImage = computedStyle.getPropertyValue("background-image");
-    setMainImg(backgroundImage.match(/url\("(.+)"\)/)[1]);
+    setMainImg(target.src);
   }
 
   const togleZoomClick = () => {
@@ -23,11 +21,12 @@ const Gallery = () => {
 
   const imagesRenderer = images.map((image) => {
     return (
-      <div
+      <img
         onClick={handleMainImgChangeOnClick}
         key={image.id}
         className="gallery__image"
-        style={{ backgroundImage: `url(${image.src})` }}
+        src = {image.src}
+        alt = 'car'
       />
     );
   })
@@ -47,11 +46,12 @@ const Gallery = () => {
 
   return (
     <div className="gallery">
-      <div
+      <img
         className={`gallery__mainImg ${isZoomed ? "zoomed-in" : ""}`}
-        style={{ backgroundImage: `url(${mainImg})` }}
+        src={mainImg}
         onClick={togleZoomClick}
-      ></div>
+        alt='shoes'
+      />
       <div className="gallery__images">
         {imagesRenderer}
       </div>

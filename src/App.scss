@@ -40,3 +40,9 @@ p, h1, h2, h3, h4, h5, h6, span {
   max-width: 1440px;
   padding: 0 24px;
 }
+
+.App {
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}

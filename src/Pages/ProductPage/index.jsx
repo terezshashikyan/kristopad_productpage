@@ -8,7 +8,7 @@ import "./style.scss";
 const ProductPage = () => (
   <div className="productPage container">
     <Gallery />
-    <div className="product__details">
+    <div className="productPage__details">
       <ProductInfo />
       <ProductPurchaseForm />
       <DeliveryTerms />
